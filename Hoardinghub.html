@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HoardingHub – List. Discover. Advertise. Smarter Outdoor Advertising.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="#home">HoardingHub</a>
+            </div>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#list-hoarding">List Your Hoarding</a></li>
+                    <li><a href="#explore-locations">Explore Locations</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="#list-hoarding" class="button button-primary">List Your Hoarding</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-image-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>List. Discover. Advertise — Smarter Hoarding Management Starts Here.</h1>
+                <p>Seamlessly list your available hoardings or pinpoint the perfect location for your next impactful advertising campaign in Bengaluru and beyond.</p>
+                <div class="hero-buttons">
+                    <a href="#list-hoarding" class="button button-large button-primary">List Your Hoarding</a>
+                    <a href="#explore-locations" class="button button-large button-secondary">Explore Available Spaces</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works-section section-spacing">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtext">Our streamlined process makes managing or finding hoardings remarkably simple and efficient, connecting supply with demand.</p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-icon"><span class="material-icons">add_business</span></div>
+                    <h3>1. Owners List Hoardings</h3>
+                    <p>Register your account and effortlessly add detailed information about your available hoarding spaces, including high-resolution photos and precise locations.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon"><span class="material-icons">search</span></div>
+                    <h3>2. We Identify & Shortlist</h3>
+                    <p>Our dedicated internal team actively identifies suitable matches based on specific advertiser requirements, curating the best options for both parties.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon"><span class="material-icons">handshake</span></div>
+                    <h3>3. You Finalize the Deal</h3>
+                    <p>Once a perfect match is found, we facilitate direct, transparent connections, empowering you to finalize agreements and launch successful advertising campaigns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="explore-locations" class="browse-hoardings-section section-spacing">
+        <div class="container">
+            <h2 class="section-title">Browse Available Hoardings</h2>
+            <p class="section-subtext">Discover prime advertising locations across Bengaluru and other major cities with our smart filters and detailed listings.</p>
+            <div class="search-filter">
+                <input type="text" placeholder="City (e.g., Bengaluru)" aria-label="Search by City">
+                <select aria-label="Filter by Availability">
+                    <option value="">Availability</option>
+                    <option value="available">Available Now</option>
+                    <option value="soon">Available Soon</option>
+                </select>
+                <select aria-label="Filter by Size">
+                    <option value="">Size</option>
+                    <option value="small">Small (e.g., 10x5ft)</option>
+                    <option value="medium">Medium (e.g., 20x10ft)</option>
+                    <option value="large">Large (e.g., 30x12ft)</option>
+                </select>
+                <select aria-label="Filter by Lighting">
+                    <option value="">Lit/Non-lit</option>
+                    <option value="lit">Lit</option>
+                    <option value="non-lit">Non-lit</option>
+                </select>
+                <button class="button button-secondary">Search Hoardings</button>
+            </div>
+            <div class="listing-grid">
+                <div class="listing-card">
+                    <img src="images/listing-mg-road.jpg" alt="Hoarding in Downtown Bengaluru">
+                    <div class="listing-info">
+                        <h3>MG Road, Downtown Bengaluru</h3>
+                        <p><strong>Location:</strong> MG Road, Bengaluru</p>
+                        <p><strong>Size:</strong> 25ft x 12ft (Lit)</p>
+                        <p><strong>Status:</strong> Available</p>
+                        <p class="price">₹65,000/month</p>
+                        <a href="#" class="button button-primary button-small">View Details</a>
+                    </div>
+                </div>
+                <div class="listing-card">
+                    <img src="images/listing-nh44.jpg" alt="Hoarding near National Highway in Bengaluru">
+                    <div class="listing-info">
+                        <h3>NH 44, Outer Ring Road</h3>
+                        <p><strong>Location:</strong> Near Electronic City Flyover</p>
+                        <p><strong>Size:</strong> 40ft x 20ft (Non-Lit)</p>
+                        <p><strong>Status:</strong> Available from Aug 1, 2025</p>
+                        <p class="price">₹80,000/month</p>
+                        <a href="#" class="button button-primary button-small">View Details</a>
+                    </div>
+                </div>
+                <div class="listing-card">
+                    <img src="images/listing-koramangala.jpg" alt="Hoarding in a bustling Koramangala commercial hub">
+                    <div class="listing-info">
+                        <h3>Koramangala 80 Feet Road</h3>
+                        <p><strong>Location:</strong> 80 Feet Road, Koramangala</p>
+                        <p><strong>Size:</strong> 30ft x 15ft (Lit)</p>
+                        <p><strong>Status:</strong> Booked (Next Available: Sep 2025)</p>
+                        <p class="price">₹55,000/month</p>
+                        <a href="#" class="button button-primary button-small">View Details</a>
+                    </div>
+                </div>
+                <div class="listing-card">
+                    <img src="images/listing-phoenix.jpg" alt="Hoarding outside a shopping mall in Bengaluru">
+                    <div class="listing-info">
+                        <h3>Phoenix Market City, Whitefield</h3>
+                        <p><strong>Location:</strong> Near Phoenix Market City</p>
+                        <p><strong>Size:</strong> 25ft x 12ft (Lit)</p>
+                        <p><strong>Status:</strong> Available</p>
+                        <p class="price">₹48,000/month</p>
+                        <a href="#" class="button button-primary button-small">View Details</a>
+                    </div>
+                </div>
+                <div class="listing-card">
+                    <img src="images/listing-indiranagar.jpg" alt="Hoarding in a residential area of Indiranagar">
+                    <div class="listing-info">
+                        <h3>Indiranagar 100 Feet Road</h3>
+                        <p><strong>Location:</strong> Near 100 Feet Road, Indiranagar</p>
+                        <p><strong>Size:</strong> 20ft x 10ft (Non-Lit)</p>
+                        <p><strong>Status:</strong> Available from Aug 15, 2025</p>
+                        <p class="price">₹60,000/month</p>
+                        <a href="#" class="button button-primary button-small">View Details</a>
+                    </div>
+                </div>
+                <div class="listing-card">
+                    <img src="images/listing-airport-road.jpg" alt="Hoarding on Bengaluru Airport Road">
+                    <div class="listing-info">
+                        <h3>Bengaluru International Airport Road</h3>
+                        <p><strong>Location:</strong> Towards KIA Expressway</p>
+                        <p><strong>Size:</strong> 50ft x 25ft (Lit)</p>
+                        <p><strong>Status:</strong> Available</p>
+                        <p class="price">₹95,000/month</p>
+                        <a href="#" class="button button-primary button-small">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center button-container">
+                <a href="#explore-locations" class="button button-large button-secondary">View All Hoardings</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose-us" class="why-choose-us-section section-spacing">
+        <div class="container">
+            <h2 class="section-title">Why Choose HoardingHub?</h2>
+            <p class="section-subtext">We are committed to making outdoor advertising effortless and effective for everyone involved.</p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span class="material-icons">gavel</span>
+                    <h3>Transparent Listing Fees</h3>
+                    <p>No hidden costs or surprises. Our pricing structure is clear and upfront for all listings.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="material-icons">verified_user</span>
+                    <h3>Verified Hoarding Info</h3>
+                    <p>Access accurate, up-to-date information and real photos for every hoarding listed.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="material-icons">support_agent</span>
+                    <h3>Dedicated Deal Support</h3>
+                    <p>Our team assists in connecting owners and advertisers, ensuring smooth transactions.</p>
+                </div>
+                <div class="feature-item">
+                    <span class="material-icons">people_alt</span>
+                    <h3>Built for Owners & Agencies</h3>
+                    <p>A platform designed with the unique needs of both hoarding owners and advertising agencies in mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="for-owners" class="info-section for-owners-section section-spacing">
+        <div class="container info-content">
+            <div class="info-text">
+                <h2 class="section-title">Monetize Your Space — Get Discovered by Top Brands</h2>
+                <p>Unlock the untapped potential of your unused hoarding spaces. Our platform connects you directly with leading advertisers looking for prime outdoor advertising spots across India.</p>
+                <ul class="feature-list">
+                    <li><span class="material-icons">check_circle</span> <strong>Easy Listing Process:</strong> Intuitive, step-by-step interface to add and manage your hoardings efficiently.</li>
+                    <li><span class="material-icons">visibility</span> <strong>Visibility to Major Advertisers:</strong> Gain exposure to a wide network of national and international brands and agencies.</li>
+                    <li><span class="material-icons">payments</span> <strong>Transparent Listing Fees:</strong> Enjoy clear, upfront pricing with no hidden costs, ensuring complete financial transparency.</li>
+                </ul>
+                <a href="#list-hoarding" class="button button-primary button-large">Start Listing Now</a>
+            </div>
+            <div class="info-image">
+                <img src="images/owners-image.jpg" alt="Hoarding owner managing digital platform for listings.">
+            </div>
+        </div>
+    </section>
+
+    <section id="for-agencies" class="info-section for-agencies-section section-spacing">
+        <div class="container info-content reverse-layout">
+            <div class="info-image">
+                <img src="images/agencies-image.jpg" alt="Advertising agency team analyzing campaign data.">
+            </div>
+            <div class="info-text">
+                <h2 class="section-title">Amplify Your Reach — Find the Perfect Hoarding for Your Campaign</h2>
+                <p>Streamline your search for outdoor advertising spaces. Access a curated database of prime locations, detailed insights, and direct connections to property owners.</p>
+                <ul class="feature-list">
+                    <li><span class="material-icons">map</span> <strong>Extensive Location Database:</strong> Explore a wide array of hoardings with precise location data and demographics.</li>
+                    <li><span class="material-icons">analytics</span> <strong>Data-Driven Decisions:</strong> Utilize insights to select the most impactful locations for your target audience.</li>
+                    <li><span class="material-icons">group</span> <strong>Direct Owner Connection:</strong> Easily connect with hoarding owners to negotiate and finalize deals without intermediaries.</li>
+                </ul>
+                <a href="#explore-locations" class="button button-primary button-large">Find Your Next Campaign Spot</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="newsletter-section section-spacing">
+        <div class="container text-center">
+            <h2 class="section-title">Stay Updated with HoardingHub!</h2>
+            <p class="section-subtext">Subscribe to our newsletter for new listings, industry insights, and special offers.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required aria-label="Enter your email address for newsletter">
+                <button type="submit" class="button button-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="list-hoarding" class="contact-form-section section-spacing">
+        <div class="container">
+            <h2 class="section-title">Ready to List Your Hoarding or Inquire?</h2>
+            <p class="section-subtext">Fill out the form below, and our team will get back to you shortly to assist with your outdoor advertising needs.</p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="interest">I am a...</label>
+                    <select id="interest" name="interest" required>
+                        <option value="">Select an option</option>
+                        <option value="owner">Hoarding Owner looking to List</option>
+                        <option value="advertiser">Advertiser/Agency looking to Book</option>
+                        <option value="general">General Inquiry</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="button button-primary button-large">Submit Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <a href="#home">HoardingHub</a>
+                <p>Smarter Outdoor Advertising.</p>
+            </div>
+            <nav class="footer-nav">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#list-hoarding">List Your Hoarding</a></li>
+                    <li><a href="#explore-locations">Explore Locations</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="footer-nav">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><span class="material-icons">location_on</span> 123 Hoarding Street, Bengaluru, India</p>
+                <p><span class="material-icons">email</span> info@hoardinghub.com</p>
+                <p><span class="material-icons">phone</span> +91 98765 43210</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"></a>
+                <a href="#" aria-label="Twitter"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+                <a href="#" aria-label="LinkedIn"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 HoardingHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const mainNav = document.getElementById('mainNav');
+
+            // Toggle the 'active' class on the navigation and 'open' on the button
+            menuToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                menuToggle.classList.toggle('open');
+            });
+
+            // Optional: Close the menu when a nav link is clicked (useful for single-page apps)
+            document.querySelectorAll('.main-nav ul li a').forEach(item => {
+                item.addEventListener('click', function() {
+                    mainNav.classList.remove('active');
+                    menuToggle.classList.remove('open');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

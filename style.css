@@ -1,0 +1,829 @@
+/* Global Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-spacing {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-subtext {
+    font-size: 1.1em;
+    color: #555;
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Header Styles */
+.main-header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #e74c3c; /* HoardingHub brand color */
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: #e74c3c;
+}
+
+.header-cta .button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+    border-radius: 5px;
+}
+
+.mobile-menu-toggle {
+    display: none; /* Hidden by default on desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    height: 70vh; /* CRUCIAL: Defines the height of your hero section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* Text color over background image */
+    background-image: url('images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Optional Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hero Content Styling */
+.hero-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay for readability */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em; /* Adjusted for better responsiveness */
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.2em; /* Adjusted for better responsiveness */
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.hero-buttons .button {
+    margin: 10px;
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.button-primary {
+    background-color: #e74c3c;
+    color: #ffffff;
+}
+
+.button-primary:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.button-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.button-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.button-large {
+    padding: 15px 35px;
+    font-size: 1.1em;
+}
+
+.button-small {
+    padding: 8px 15px;
+    font-size: 0.85em;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    background-color: #f0f4f7; /* Light background for contrast */
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.step-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.step-icon {
+    font-size: 3em;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.step-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.step-card p {
+    color: #666;
+    font-size: 1em;
+}
+
+/* Browse Hoardings Section */
+.browse-hoardings-section {
+    background-color: #ffffff;
+}
+
+.search-filter {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    gap: 15px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.search-filter input,
+.search-filter select {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    flex: 1; /* Allows elements to grow and shrink */
+    min-width: 180px; /* Ensures elements don't get too small before wrapping */
+}
+
+.search-filter button {
+    padding: 12px 25px;
+    font-size: 1em;
+    min-width: 150px;
+}
+
+.listing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.listing-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.listing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.listing-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.listing-info {
+    padding: 20px;
+}
+
+.listing-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6em;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.listing-info p {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.listing-info p strong {
+    color: #333;
+}
+
+.listing-info .price {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #e74c3c;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.listing-info .button-small {
+    display: block;
+    width: calc(100% - 40px); /* Adjust for padding */
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Why Choose Us Section */
+.why-choose-us-section {
+    background-color: #ffffff; /* Or another light color */
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #f0f4f7; /* Light background for features */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+}
+
+.feature-item .material-icons {
+    font-size: 3.5em;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    color: #666;
+    font-size: 1em;
+}
+
+
+/* Info Sections (For Owners/Agencies) */
+.info-section {
+    background-color: #f0f4f7;
+}
+
+.for-agencies-section {
+    background-color: #ffffff; /* Alternate background for distinction */
+}
+
+.info-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap; /* Allows elements to wrap on smaller screens */
+}
+
+.info-content.reverse-layout {
+    flex-direction: row-reverse; /* Reverse order for agencies section on desktop */
+}
+
+.info-text, .info-image {
+    flex: 1;
+    min-width: 300px; /* Ensures columns don't get too squished before wrapping */
+}
+
+.info-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.info-text .section-title {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.info-text p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: #444;
+}
+
+.feature-list li .material-icons {
+    color: #27ae60; /* Green checkmark */
+    margin-right: 10px;
+    font-size: 1.4em;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    background-color: #2c3e50; /* Dark background for contrast */
+    color: #ffffff;
+}
+
+.newsletter-section .section-title,
+.newsletter-section .section-subtext {
+    color: #ffffff;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.newsletter-form input[type="email"] {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    min-width: 250px; /* Ensure input is not too small */
+}
+
+.newsletter-form button {
+    padding: 15px 30px;
+    font-size: 1em;
+    border-radius: 8px;
+    background-color: #e74c3c;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+
+/* Contact Form Section */
+.contact-form-section {
+    background-color: #f0f4f7;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: calc(100% - 24px); /* Account for padding */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+.main-footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 60px 0 20px;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-logo, .footer-nav, .footer-contact, .footer-social {
+    flex: 1;
+    min-width: 200px; /* Minimum width for columns */
+}
+
+.footer-logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    color: #bdc3c7;
+}
+
+.footer-nav h3, .footer-contact h3, .footer-social h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav ul li {
+    margin-bottom: 10px;
+}
+
+.footer-nav ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+    color: #e74c3c;
+}
+
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #bdc3c7;
+}
+
+.footer-contact .material-icons {
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: #e74c3c;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.footer-social img {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    /* You might not need filter: invert(100%); if your downloaded icons are already white */
+    /* Remove or adjust if your icons look weird */
+    /* filter: invert(100%); */
+    transition: transform 0.2s ease;
+}
+
+.footer-social img:hover {
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid #34495e;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #bdc3c7;
+}
+
+/* Mobile Responsiveness */
+/* Styles for screens smaller than 992px (typical tablet/small laptop) */
+@media (max-width: 992px) {
+    .main-nav {
+        display: none; /* Hide main nav on smaller screens */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background-color: #ffffff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+    }
+
+    .main-nav.active {
+        display: flex; /* Show when active (JavaScript toggles this) */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+
+    .header-cta {
+        display: none; /* Hide CTA button on mobile for simplicity, or re-style it */
+    }
+
+    .mobile-menu-toggle {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .search-filter {
+        flex-direction: column; /* Stack filters vertically */
+        align-items: stretch; /* Stretch items to full width */
+    }
+    .search-filter input,
+    .search-filter select,
+    .search-filter button {
+        width: 100%; /* Take full width */
+        min-width: unset; /* Remove min-width constraint */
+    }
+
+    .info-content {
+        flex-direction: column; /* Stack owner/agency sections vertically */
+        text-align: center;
+    }
+
+    .info-content.reverse-layout {
+        flex-direction: column; /* Keep consistent stacking on small screens */
+    }
+
+    .info-text .section-title {
+        text-align: center;
+    }
+
+    .feature-list {
+        text-align: left; /* Keep feature list text aligned left within its stacked column */
+        width: fit-content; /* Adjust width to content */
+        margin: 0 auto; /* Center the list itself */
+    }
+    .feature-list li {
+        justify-content: flex-start; /* Align list items to the left */
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr; /* Stack features vertically on smaller screens */
+    }
+
+    .newsletter-form {
+        flex-direction: column; /* Stack newsletter input and button vertically */
+        align-items: center;
+    }
+
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+        width: 100%; /* Make them full width */
+        max-width: 300px; /* Constrain max width for better appearance */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-contact p {
+        justify-content: center; /* Center contact icons and text */
+    }
+
+    .footer-nav ul {
+        align-items: center; /* Center footer nav links */
+    }
+
+    .footer-social {
+        justify-content: center; /* Center social icons */
+        display: flex; /* Make it a flex container to use justify-content */
+    }
+}
+
+/* Styles for screens smaller than 768px (typical mobile phones) */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2em;
+    }
+
+    .section-subtext {
+        font-size: 1em;
+    }
+
+    .hero-section {
+        height: 60vh; /* Make hero section a bit shorter on very small screens */
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+        padding: 0 10px; /* Add some padding to prevent text from hitting edges */
+    }
+
+    .hero-text p {
+        font-size: 0.9em;
+        padding: 0 10px;
+    }
+
+    .hero-buttons {
+        flex-direction: column; /* Stack hero buttons vertically */
+    }
+
+    .button-large {
+        width: calc(100% - 20px); /* Full width with padding */
+        margin: 5px auto; /* Center and add vertical space */
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr; /* Stack step cards vertically */
+    }
+}
+
+/* Optional: Styles for the mobile menu toggle animation */
+.mobile-menu-toggle.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
